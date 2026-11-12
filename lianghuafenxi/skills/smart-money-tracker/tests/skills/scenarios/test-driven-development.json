@@ -1,0 +1,34 @@
+[
+  {
+    "name": "red_phase",
+    "description": "Agent writes a failing test before implementing code",
+    "user_prompt": "Implement a function that calculates factorial",
+    "expected_behavior": "Write a failing test first",
+    "steps": [
+      {"tool": "bash", "args": {"command": "create test file"}},
+      {"tool": "edit", "args": {"action": "write failing test"}},
+      {"tool": "bash", "args": {"command": "run tests"}, "expect_error": true, "error_message": "Test fails as expected (RED phase)"}
+    ]
+  },
+  {
+    "name": "green_phase",
+    "description": "Agent writes minimal code to make the test pass",
+    "user_prompt": "Fix the failing factorial test",
+    "expected_behavior": "Write minimal implementation to pass test",
+    "steps": [
+      {"tool": "edit", "args": {"action": "implement factorial"}},
+      {"tool": "bash", "args": {"command": "run tests"}}
+    ]
+  },
+  {
+    "name": "refactor_phase",
+    "description": "Agent refactors while keeping tests green",
+    "user_prompt": "Clean up the factorial implementation",
+    "expected_behavior": "Refactor code without breaking tests",
+    "steps": [
+      {"tool": "edit", "args": {"action": "refactor implementation"}},
+      {"tool": "bash", "args": {"command": "run tests"}},
+      {"tool": "lsp_diagnostics", "args": {"check": "no errors"}}
+    ]
+  }
+]

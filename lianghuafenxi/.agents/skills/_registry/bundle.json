@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "display_name": "A-Stockit",
+  "namespace": "astockit",
+  "market": "China A-share",
+  "distribution_model": "bundle-first",
+  "bundle_root": "skills/astockit",
+  "design_doc": "index.md",
+  "shared_source_root": "_src",
+  "docs_index": "_docs/index.md",
+  "skill_registry": "_registry/skills.json",
+  "runtime_registry": "_registry/runtime.json"
+}

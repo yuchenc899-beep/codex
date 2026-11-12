@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "strategies": [
+    {
+      "id": "bull_trend",
+      "display_name": "默认多头趋势",
+      "category": "trend",
+      "execution_mode": "deterministic",
+      "description": "优先寻找多头排列、趋势延续和回踩低吸。",
+      "router_tags": ["trending_up", "default"],
+      "holding_days": 15
+    },
+    {
+      "id": "ma_golden_cross",
+      "display_name": "均线金叉",
+      "category": "trend",
+      "execution_mode": "deterministic",
+      "description": "检测 MA5 上穿 MA10 或 MA10 上穿 MA20 的确认信号。",
+      "router_tags": ["trending_up", "cross"],
+      "holding_days": 12
+    },
+    {
+      "id": "volume_breakout",
+      "display_name": "放量突破",
+      "category": "trend",
+      "execution_mode": "deterministic",
+      "description": "检测放量突破阻力位后的趋势延续。",
+      "router_tags": ["trending_up", "breakout"],
+      "holding_days": 10
+    },
+    {
+      "id": "shrink_pullback",
+      "display_name": "缩量回踩",
+      "category": "trend",
+      "execution_mode": "deterministic",
+      "description": "检测多头趋势中的缩量回踩买点。",
+      "router_tags": ["trending_up", "pullback", "sideways"],
+      "holding_days": 10
+    },
+    {
+      "id": "box_oscillation",
+      "display_name": "箱体震荡",
+      "category": "range",
+      "execution_mode": "deterministic",
+      "description": "识别区间震荡，在箱底低吸、箱顶兑现。",
+      "router_tags": ["sideways"],
+      "holding_days": 8
+    },
+    {
+      "id": "bottom_volume",
+      "display_name": "底部放量",
+      "category": "reversal",
+      "execution_mode": "deterministic",
+      "description": "识别持续下跌后的底部放量反转。",
+      "router_tags": ["trending_down", "reversal"],
+      "holding_days": 12
+    },
+    {
+      "id": "dragon_head",
+      "display_name": "龙头策略",
+      "category": "momentum",
+      "execution_mode": "advisory",
+      "description": "板块轮动中的龙头确认，适合主观研判。",
+      "router_tags": ["sector_hot"]
+    },
+    {
+      "id": "emotion_cycle",
+      "display_name": "情绪周期",
+      "category": "framework",
+      "execution_mode": "advisory",
+      "description": "围绕情绪低点和过热顶部做逆向判断。",
+      "router_tags": ["sector_hot", "volatile"]
+    },
+    {
+      "id": "chan_theory",
+      "display_name": "缠论",
+      "category": "framework",
+      "execution_mode": "advisory",
+      "description": "基于中枢、背驰和买卖点级别的结构化框架。",
+      "router_tags": ["volatile", "sideways"]
+    },
+    {
+      "id": "wave_theory",
+      "display_name": "波浪理论",
+      "category": "framework",
+      "execution_mode": "advisory",
+      "description": "使用波浪结构和级别判断趋势与回撤。",
+      "router_tags": ["volatile"]
+    }
+  ]
+}

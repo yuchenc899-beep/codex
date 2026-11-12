@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "name": "market-brief",
+      "summary": "Default one-symbol brief combining current-state, action, and execution frames.",
+      "path": "market-brief/SKILL.md",
+      "docs": "_docs/skills/market-brief.md",
+      "entry_script": "market-brief/run.py"
+    },
+    {
+      "name": "market-data",
+      "summary": "Run the one-symbol data-pipeline stage for normalization, quality review, and export.",
+      "path": "market-data/SKILL.md",
+      "docs": "_docs/skills/market-data.md",
+      "entry_script": "market-data/run.py"
+    },
+    {
+      "name": "market-analyze",
+      "summary": "Interpret current trend, regime, and risk state without action or sizing.",
+      "path": "market-analyze/SKILL.md",
+      "docs": "_docs/skills/market-analyze.md",
+      "entry_script": "market-analyze/run.py"
+    },
+    {
+      "name": "decision-support",
+      "summary": "Produce conditional action and sizing guidance under explicit account assumptions.",
+      "path": "decision-support/SKILL.md",
+      "docs": "_docs/skills/decision-support.md",
+      "entry_script": "decision-support/run.py"
+    },
+    {
+      "name": "strategy-design",
+      "summary": "Translate an accepted view into a conditional execution plan, checklist, and monitoring frame.",
+      "path": "strategy-design/SKILL.md",
+      "docs": "_docs/skills/strategy-design.md",
+      "entry_script": "strategy-design/run.py"
+    },
+    {
+      "name": "market-screen",
+      "summary": "Rank a candidate universe for breadth-first triage before deeper review.",
+      "path": "market-screen/SKILL.md",
+      "docs": "_docs/skills/market-screen.md",
+      "entry_script": "market-screen/run.py"
+    },
+    {
+      "name": "session-status",
+      "summary": "Inspect runtime context, recent workflow state, and artifact locations.",
+      "path": "session-status/SKILL.md",
+      "docs": "_docs/skills/session-status.md",
+      "entry_script": "session-status/run.py"
+    },
+    {
+      "name": "feishu-notify",
+      "summary": "Send a fail-open outbound Feishu notification for workflow handoff or status delivery.",
+      "path": "feishu-notify/SKILL.md",
+      "docs": "_docs/skills/feishu-notify.md",
+      "entry_script": "feishu-notify/run.py"
+    },
+    {
+      "name": "decision-dashboard",
+      "summary": "Build a batch conditional-action dashboard over a watchlist or symbol set.",
+      "path": "decision-dashboard/SKILL.md",
+      "docs": "_docs/skills/decision-dashboard.md",
+      "entry_script": "decision-dashboard/run.py"
+    },
+    {
+      "name": "watchlist-import",
+      "summary": "Run universe intake by normalizing raw watchlist text or files into resolved symbols.",
+      "path": "watchlist-import/SKILL.md",
+      "docs": "_docs/skills/watchlist-import.md",
+      "entry_script": "watchlist-import/run.py"
+    },
+    {
+      "name": "fundamental-context",
+      "summary": "Gather best-effort non-price context with explicit partial-status handling.",
+      "path": "fundamental-context/SKILL.md",
+      "docs": "_docs/skills/fundamental-context.md",
+      "entry_script": "fundamental-context/run.py"
+    },
+    {
+      "name": "market-recap",
+      "summary": "Render market-review and next-session recap blueprints, not live market payloads.",
+      "path": "market-recap/SKILL.md",
+      "docs": "_docs/skills/market-recap.md",
+      "entry_script": "market-recap/run.py"
+    },
+    {
+      "name": "analysis",
+      "summary": "Build a deeper one-symbol research memo with persisted artifacts.",
+      "path": "analysis/SKILL.md",
+      "docs": "_docs/skills/analysis.md",
+      "entry_script": "analysis/run.py"
+    },
+    {
+      "name": "strategy-chat",
+      "summary": "Manage anchored multi-turn strategy discussion over an explicit symbol or prior artifact.",
+      "path": "strategy-chat/SKILL.md",
+      "docs": "_docs/skills/strategy-chat.md"
+    },
+    {
+      "name": "news-intel",
+      "summary": "Rank caller-supplied headline evidence into catalyst, risk, and narrative blocks.",
+      "path": "news-intel/SKILL.md",
+      "docs": "_docs/skills/news-intel.md",
+      "entry_script": "news-intel/run.py"
+    },
+    {
+      "name": "stock-data",
+      "summary": "Assemble a reusable structured snapshot across market features and fail-open context.",
+      "path": "stock-data/SKILL.md",
+      "docs": "_docs/skills/stock-data.md",
+      "entry_script": "stock-data/run.py"
+    },
+    {
+      "name": "technical-scan",
+      "summary": "Provide a technical-only read anchored to existing market-analysis outputs.",
+      "path": "technical-scan/SKILL.md",
+      "docs": "_docs/skills/technical-scan.md"
+    },
+    {
+      "name": "analysis-history",
+      "summary": "Browse and compare saved runs over time using persisted artifacts.",
+      "path": "analysis-history/SKILL.md",
+      "docs": "_docs/skills/analysis-history.md"
+    },
+    {
+      "name": "backtest-evaluator",
+      "summary": "Score saved runs or deterministic simulations against later data with explicit assumptions.",
+      "path": "backtest-evaluator/SKILL.md",
+      "docs": "_docs/skills/backtest-evaluator.md",
+      "entry_script": "backtest-evaluator/run.py"
+    },
+    {
+      "name": "data-sync",
+      "summary": "Audit data freshness, source health, and next sync actions for the workflow.",
+      "path": "data-sync/SKILL.md",
+      "docs": "_docs/skills/data-sync.md"
+    },
+    {
+      "name": "reports",
+      "summary": "Retrieve exact stored artifacts and metadata without rerunning analysis.",
+      "path": "reports/SKILL.md",
+      "docs": "_docs/skills/reports.md"
+    },
+    {
+      "name": "paper-trading",
+      "summary": "Rehearse simulated execution with local ledger updates and A-share settlement rules.",
+      "path": "paper-trading/SKILL.md",
+      "docs": "_docs/skills/paper-trading.md",
+      "entry_script": "paper-trading/run.py"
+    },
+    {
+      "name": "watchlist",
+      "summary": "Manage post-import universe grouping, review cadence, and tracking workflow.",
+      "path": "watchlist/SKILL.md",
+      "docs": "_docs/skills/watchlist.md"
+    },
+    {
+      "name": "model-capability-advisor",
+      "summary": "Recommend heuristic model pairings for workflow design and agent execution depth.",
+      "path": "model-capability-advisor/SKILL.md",
+      "docs": "_docs/skills/model-capability-advisor.md",
+      "entry_script": "model-capability-advisor/run.py"
+    }
+  ]
+}

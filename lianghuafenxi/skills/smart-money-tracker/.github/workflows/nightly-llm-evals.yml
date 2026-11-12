@@ -1,0 +1,43 @@
+name: Nightly LLM Evals
+
+on:
+  schedule:
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+
+jobs:
+  llm-evals:
+    runs-on: ubuntu-latest
+    environment: llm-eval
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+      - name: Install dependencies
+        run: uv sync
+      - name: Run LLM evals
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+          EVAL_BUDGET_USD: "5.00"
+        run: uv run pytest tests/skills/e2e/ -v --tb=short -k "llm_judge"
+      - name: Upload reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-reports
+          path: tests/skills/reports/
+          if-no-files-found: ignore
+      - name: Comment on PR
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.pr_number
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('tests/skills/reports/report_latest.md', 'utf8');
+            github.rest.issues.createComment({
+              issue_number: context.payload.inputs.pr_number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `## Nightly LLM Eval Results\n\n${report}`
+            });

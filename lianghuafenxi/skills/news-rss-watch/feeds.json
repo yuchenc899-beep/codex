@@ -1,0 +1,332 @@
+{
+  "$comment": "Seed feed registry for news-rss-watch. All URLs verified live on 2026-08-08. State dir: $NEWS_WATCHER_STATE_DIR or ~/.finance-skills/watcher-state/. Add feeds via: python scripts/watch_feeds.py --action add --name <id> --url <url> --category <cat>",
+  "feeds": [
+    {
+      "id": "npr_news",
+      "name": "NPR News (US)",
+      "url": "https://feeds.npr.org/1001/rss.xml",
+      "category": "us",
+      "enabled": true,
+      "lang": "en-US"
+    },
+    {
+      "id": "cnbc_top",
+      "name": "CNBC Top News (US)",
+      "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+      "category": "us",
+      "enabled": true,
+      "lang": "en-US"
+    },
+    {
+      "id": "wsj_markets",
+      "name": "WSJ Markets (US)",
+      "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
+      "category": "us",
+      "enabled": true,
+      "lang": "en-US"
+    },
+    {
+      "id": "marketwatch_top",
+      "name": "MarketWatch Top Stories",
+      "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+      "category": "markets",
+      "enabled": true,
+      "lang": "en-US"
+    },
+    {
+      "id": "marketwatch_pulse",
+      "name": "MarketWatch MarketPulse",
+      "url": "https://feeds.content.dowjones.io/public/rss/mw_marketpulse",
+      "category": "markets",
+      "enabled": true,
+      "lang": "en-US"
+    },
+    {
+      "id": "yahoo_spx",
+      "name": "Yahoo Finance S&P 500",
+      "url": "https://feeds.finance.yahoo.com/rss/2.0/headline?s=%5EGSPC&region=US&lang=en-US",
+      "category": "markets",
+      "enabled": true,
+      "lang": "en-US"
+    },
+    {
+      "id": "sec_press",
+      "name": "SEC Press Releases",
+      "url": "https://www.sec.gov/news/pressreleases.rss",
+      "category": "us",
+      "enabled": true,
+      "lang": "en-US",
+      "note": "Needs a non-default User-Agent (SEC blocks generic bots)"
+    },
+    {
+      "id": "fed_press",
+      "name": "Federal Reserve Press",
+      "url": "https://www.federalreserve.gov/feeds/press_all.xml",
+      "category": "us",
+      "enabled": true,
+      "lang": "en-US"
+    },
+    {
+      "id": "google_us",
+      "name": "Google News — US edition",
+      "url": "https://news.google.com/rss?hl=en-US&gl=US&ceid=US:en",
+      "category": "us",
+      "enabled": true,
+      "lang": "en-US",
+      "max_per_poll": 15
+    },
+    {
+      "id": "scmp_news",
+      "name": "SCMP News (China/HK)",
+      "url": "https://www.scmp.com/rss/4/feed",
+      "category": "china",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "scmp_business",
+      "name": "SCMP Business",
+      "url": "https://www.scmp.com/rss/91/feed",
+      "category": "china",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "cgtn_world",
+      "name": "CGTN World (Chinese state media)",
+      "url": "https://www.cgtn.com/subscribe/rss/section/world.xml",
+      "category": "china",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "xinhua_english",
+      "name": "Xinhua English (Chinese state media)",
+      "url": "http://www.xinhuanet.com/english/rss/worldrss.xml",
+      "category": "china",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "google_cn",
+      "name": "Google News — China edition (zh)",
+      "url": "https://news.google.com/rss?hl=zh-CN&gl=CN&ceid=CN:zh-Hans",
+      "category": "china",
+      "enabled": true,
+      "lang": "zh-CN",
+      "max_per_poll": 15
+    },
+    {
+      "id": "cna_main",
+      "name": "CNA (Channel NewsAsia) Latest",
+      "url": "https://www.channelnewsasia.com/api/v1/rss-outbound-feed?_format=xml",
+      "category": "singapore",
+      "enabled": true,
+      "lang": "en-SG"
+    },
+    {
+      "id": "straits_times_sg",
+      "name": "The Straits Times — Singapore",
+      "url": "https://www.straitstimes.com/news/singapore/rss.xml",
+      "category": "singapore",
+      "enabled": true,
+      "lang": "en-SG"
+    },
+    {
+      "id": "businesstimes_sg",
+      "name": "The Business Times (SG)",
+      "url": "https://www.businesstimes.com.sg/rss.xml",
+      "category": "singapore",
+      "enabled": true,
+      "lang": "en-SG"
+    },
+    {
+      "id": "google_sg",
+      "name": "Google News — Singapore edition",
+      "url": "https://news.google.com/rss?hl=en-SG&gl=SG&ceid=SG:en",
+      "category": "singapore",
+      "enabled": true,
+      "lang": "en-SG",
+      "max_per_poll": 15
+    },
+    {
+      "id": "google_sg_business",
+      "name": "Google News SG — Business topic",
+      "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=en-SG&gl=SG&ceid=SG:en",
+      "category": "singapore",
+      "enabled": true,
+      "lang": "en-SG",
+      "max_per_poll": 15
+    },
+    {
+      "id": "bbc_business",
+      "name": "BBC Business",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml",
+      "category": "markets",
+      "enabled": true,
+      "lang": "en-GB"
+    },
+    {
+      "id": "ft_feed",
+      "name": "Financial Times News Feed",
+      "url": "https://www.ft.com/news-feed?format=rss",
+      "category": "markets",
+      "enabled": true,
+      "lang": "en-GB"
+    },
+    {
+      "id": "investing_top",
+      "name": "Investing.com Top News",
+      "url": "https://www.investing.com/rss/news_25.rss",
+      "category": "markets",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "investing_realtime",
+      "name": "Investing.com Real-time News",
+      "url": "https://www.investing.com/rss/news_1.rss",
+      "category": "markets",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "coindesk",
+      "name": "CoinDesk",
+      "url": "https://www.coindesk.com/arc/outboundfeeds/rss/",
+      "category": "markets",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "cointelegraph",
+      "name": "Cointelegraph",
+      "url": "https://cointelegraph.com/rss",
+      "category": "markets",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "google_business_us",
+      "name": "Google News — Business topic (US)",
+      "url": "https://news.google.com/rss/headlines/section/topic/BUSINESS?hl=en-US&gl=US&ceid=US:en",
+      "category": "markets",
+      "enabled": true,
+      "lang": "en-US",
+      "max_per_poll": 15
+    },
+    {
+      "id": "bbc_world",
+      "name": "BBC World",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml",
+      "category": "important",
+      "enabled": true,
+      "lang": "en-GB"
+    },
+    {
+      "id": "guardian_world",
+      "name": "The Guardian — World",
+      "url": "https://www.theguardian.com/world/rss",
+      "category": "important",
+      "enabled": true,
+      "lang": "en-GB"
+    },
+    {
+      "id": "guardian_business",
+      "name": "The Guardian — Business",
+      "url": "https://www.theguardian.com/business/rss",
+      "category": "important",
+      "enabled": true,
+      "lang": "en-GB"
+    },
+    {
+      "id": "google_world",
+      "name": "Google News — World topic (US)",
+      "url": "https://news.google.com/rss/headlines/section/topic/WORLD?hl=en-US&gl=US&ceid=US:en",
+      "category": "important",
+      "enabled": true,
+      "lang": "en-US",
+      "max_per_poll": 15
+    },
+    {
+      "id": "arxiv_cs_ai",
+      "name": "arXiv cs.AI (weekday-only updates)",
+      "url": "https://arxiv.org/rss/cs.AI",
+      "category": "research",
+      "enabled": true,
+      "lang": "en",
+      "note": "arXiv RSS updates daily ~00:00 ET, empty on weekends"
+    },
+    {
+      "id": "arxiv_qfin_st",
+      "name": "arXiv q-fin.ST (stat finance)",
+      "url": "https://arxiv.org/rss/q-fin.ST",
+      "category": "research",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "arxiv_qfin_ec",
+      "name": "arXiv q-fin.EC (econ)",
+      "url": "https://arxiv.org/rss/q-fin.EC",
+      "category": "research",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "arxiv_qfin_tr",
+      "name": "arXiv q-fin.TR (trading)",
+      "url": "https://arxiv.org/rss/q-fin.TR",
+      "category": "research",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "arxiv_qfin_pm",
+      "name": "arXiv q-fin.PM (portfolio mgmt)",
+      "url": "https://arxiv.org/rss/q-fin.PM",
+      "category": "research",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "arxiv_qfin_mf",
+      "name": "arXiv q-fin.MF (math finance)",
+      "url": "https://arxiv.org/rss/q-fin.MF",
+      "category": "research",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "arxiv_qfin_rm",
+      "name": "arXiv q-fin.RM (risk mgmt)",
+      "url": "https://arxiv.org/rss/q-fin.RM",
+      "category": "research",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "arxiv_qfin_gn",
+      "name": "arXiv q-fin.GN (general)",
+      "url": "https://arxiv.org/rss/q-fin.GN",
+      "category": "research",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "arxiv_econ_gn",
+      "name": "arXiv econ.GN (general econ)",
+      "url": "https://arxiv.org/rss/econ.GN",
+      "category": "research",
+      "enabled": true,
+      "lang": "en"
+    },
+    {
+      "id": "mas_singapore_monetary_policy",
+      "name": "MAS Singapore monetary policy",
+      "url": "https://news.google.com/rss/search?q=MAS+Singapore+monetary+policy&hl=en-SG&gl=SG&ceid=SG:en",
+      "category": "singapore",
+      "enabled": true
+    }
+  ]
+}

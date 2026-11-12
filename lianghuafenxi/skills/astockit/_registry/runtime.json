@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "shared_source_root": "_src",
+  "commands": [
+    {
+      "name": "init-config",
+      "summary": "Create a default astockit.json file.",
+      "docs": "_docs/runtime/cli.md"
+    },
+    {
+      "name": "registry",
+      "summary": "Print bundle, skill, or runtime registry metadata.",
+      "docs": "_docs/runtime/registry.md"
+    },
+    {
+      "name": "watchlist-import",
+      "summary": "Normalize raw watchlist text or files into resolved symbols and unresolved items.",
+      "docs": "_docs/runtime/cli.md"
+    },
+    {
+      "name": "market-recap",
+      "summary": "Render CN or US market-review blueprints as markdown or prompt blocks.",
+      "docs": "_docs/runtime/cli.md"
+    },
+    {
+      "name": "fundamental-context",
+      "summary": "Fetch best-effort fundamental, capital-flow, and dragon-tiger context with explicit status fields.",
+      "docs": "_docs/runtime/data.md"
+    },
+    {
+      "name": "decision-dashboard",
+      "summary": "Build a batch conditional-action dashboard over multiple symbols.",
+      "docs": "_docs/runtime/cli.md"
+    },
+    {
+      "name": "market-brief",
+      "summary": "Run the default one-symbol brief and persist the descriptive, decision, and plan bundle.",
+      "docs": "_docs/runtime/cli.md"
+    },
+    {
+      "name": "market-data",
+      "summary": "Normalize market data, review one-symbol data quality, and optionally export the enriched frame.",
+      "docs": "_docs/runtime/data.md"
+    },
+    {
+      "name": "market-analyze",
+      "summary": "Render descriptive market-state interpretation from the normalized snapshot.",
+      "docs": "_docs/runtime/data.md"
+    },
+    {
+      "name": "decision-support",
+      "summary": "Compute conditional action, quantity, and risk framing for one symbol.",
+      "docs": "_docs/runtime/cli.md"
+    },
+    {
+      "name": "strategy-design",
+      "summary": "Design a conditional execution plan, zones, and monitoring checklist for one symbol.",
+      "docs": "_docs/runtime/cli.md"
+    },
+    {
+      "name": "market-screen",
+      "summary": "Rank a candidate universe using the shared market-state score.",
+      "docs": "_docs/runtime/data.md"
+    },
+    {
+      "name": "stock-data",
+      "summary": "Assemble a reusable structured snapshot with indicators and fail-open context.",
+      "docs": "_docs/runtime/data.md"
+    },
+    {
+      "name": "news-intel",
+      "summary": "Rank manual or file-backed headlines into bounded catalyst, risk, and narrative blocks.",
+      "docs": "_docs/runtime/data.md"
+    },
+    {
+      "name": "analysis",
+      "summary": "Render a deeper multi-block research packet for one symbol and persist artifacts.",
+      "docs": "_docs/runtime/data.md"
+    },
+    {
+      "name": "backtest-evaluator",
+      "summary": "Evaluate a saved run or deterministic strategy simulation against later price action.",
+      "docs": "_docs/runtime/data.md"
+    },
+    {
+      "name": "paper-trading",
+      "summary": "Apply JSON-backed paper trades with local ledger updates and A-share settlement rules.",
+      "docs": "_docs/runtime/cli.md"
+    },
+    {
+      "name": "model-capability-advisor",
+      "summary": "Recommend heuristic quick and deep model pairings for workflow design.",
+      "docs": "_docs/runtime/registry.md"
+    },
+    {
+      "name": "session-status",
+      "summary": "Inspect runtime context, artifact locations, and recent workflow history.",
+      "docs": "_docs/runtime/registry.md"
+    },
+    {
+      "name": "feishu-notify",
+      "summary": "Send a fail-open outbound Feishu notification card.",
+      "docs": "_docs/runtime/feishu.md"
+    }
+  ]
+}

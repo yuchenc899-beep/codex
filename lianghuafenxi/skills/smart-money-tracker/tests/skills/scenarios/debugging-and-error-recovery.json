@@ -1,0 +1,38 @@
+[
+  {
+    "name": "test_failure",
+    "description": "Agent reproduces and fixes a test failure",
+    "user_prompt": "Fix the failing test in test_calculator.py",
+    "expected_behavior": "Reproduce failure, then fix it",
+    "steps": [
+      {"tool": "bash", "args": {"command": "run failing test"}, "expect_error": true, "error_message": "Test failure reproduced"},
+      {"tool": "read", "args": {"file": "test_calculator.py"}},
+      {"tool": "edit", "args": {"action": "fix test"}},
+      {"tool": "bash", "args": {"command": "run tests"}}
+    ]
+  },
+  {
+    "name": "build_error",
+    "description": "Agent diagnoses and fixes a build error",
+    "user_prompt": "The build is failing with a syntax error",
+    "expected_behavior": "Find syntax error and fix it",
+    "steps": [
+      {"tool": "bash", "args": {"command": "run build"}, "expect_error": true, "error_message": "Build error reproduced"},
+      {"tool": "read", "args": {"file": "build output"}},
+      {"tool": "edit", "args": {"action": "fix syntax error"}},
+      {"tool": "bash", "args": {"command": "run build"}}
+    ]
+  },
+  {
+    "name": "runtime_error",
+    "description": "Agent traces and fixes a runtime exception",
+    "user_prompt": "The app crashes with KeyError on startup",
+    "expected_behavior": "Trace exception to source and fix",
+    "steps": [
+      {"tool": "bash", "args": {"command": "run app"}, "expect_error": true, "error_message": "Runtime error reproduced"},
+      {"tool": "read", "args": {"file": "stack trace"}},
+      {"tool": "edit", "args": {"action": "fix KeyError"}},
+      {"tool": "bash", "args": {"command": "run app"}}
+    ]
+  }
+]

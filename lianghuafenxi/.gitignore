@@ -1,0 +1,6 @@
+/private/
+__pycache__/
+/.api-check-deps/
+/prototype/node_modules/
+/prototype/dist/
+/prototype/.wrangler/

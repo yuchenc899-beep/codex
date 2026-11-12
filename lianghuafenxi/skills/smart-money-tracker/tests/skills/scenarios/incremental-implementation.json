@@ -1,0 +1,29 @@
+[
+  {
+    "name": "feature_addition",
+    "description": "Agent adds a new feature incrementally",
+    "user_prompt": "Add user authentication to the API",
+    "expected_behavior": "Add feature in small, tested increments",
+    "steps": [
+      {"tool": "edit", "args": {"action": "add auth model"}},
+      {"tool": "bash", "args": {"command": "run tests"}},
+      {"tool": "edit", "args": {"action": "add auth endpoint"}},
+      {"tool": "bash", "args": {"command": "run tests"}},
+      {"tool": "edit", "args": {"action": "add auth middleware"}},
+      {"tool": "bash", "args": {"command": "run tests"}}
+    ]
+  },
+  {
+    "name": "bug_fix",
+    "description": "Agent fixes a bug without breaking existing features",
+    "user_prompt": "Fix the race condition in the worker pool",
+    "expected_behavior": "Minimal fix with regression test",
+    "steps": [
+      {"tool": "bash", "args": {"command": "run tests to confirm bug"}, "expect_error": true},
+      {"tool": "edit", "args": {"action": "add regression test"}},
+      {"tool": "bash", "args": {"command": "run tests - new test fails"}, "expect_error": true},
+      {"tool": "edit", "args": {"action": "fix race condition"}},
+      {"tool": "bash", "args": {"command": "run all tests"}}
+    ]
+  }
+]

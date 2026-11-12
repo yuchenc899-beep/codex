@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="296" height="76" viewBox="0 0 296 76" fill="none">
+  <title>宇辰看板 YUCHEN DASHBOARD 横版标识</title>
+  <rect width="296" height="76" rx="12" fill="#000"/>
+  <g transform="translate(14 14)">
+    <rect x="1" y="1" width="46" height="46" rx="13" fill="#10151C" stroke="#314458"/>
+    <path d="M9 33.5C16.5 40 33.5 34.5 39 20" stroke="#82B9EC" stroke-opacity=".55" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M13.5 14.5L24 25V35M24 25L32 17" stroke="#EAF3FD" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M35.5 7L37.4 12.1L42.5 14L37.4 15.9L35.5 21L33.6 15.9L28.5 14L33.6 12.1L35.5 7Z" fill="#9CCBFA"/>
+    <circle cx="12" cy="33.5" r="2" fill="#9CCBFA"/>
+  </g>
+  <text x="77" y="38" fill="#F0F3F8" font-family="Microsoft YaHei,PingFang SC,sans-serif" font-size="25" font-weight="600" letter-spacing="2">宇辰看板</text>
+  <text x="79" y="56" fill="#95A4B5" font-family="Segoe UI,Arial,sans-serif" font-size="9" font-weight="600" letter-spacing="2.1">YUCHEN DASHBOARD</text>
+</svg>
